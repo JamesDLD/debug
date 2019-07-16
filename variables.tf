@@ -34,21 +34,6 @@ variable "network_resource_group_name" {
   type        = string
 }
 
-variable "network_ddos_protection_plan" {
-  description = "Network network ddos protection plan parameters."
-  type = object({
-    id                  = string
-    name                = string
-    resource_group_name = string
-  })
-  default = {
-    id                  = "/subscriptions/43c91cd1-0bbf-40c0-9c3a-401b8dfd2dd3/resourceGroups/caas-infra1-svcd-gal-qual-rg1/providers/Microsoft.Network/ddosProtectionPlans/westeurope-protection-plan1"
-    name                = "westeurope-protection-plan1"
-    resource_group_name = "caas-infra1-svcd-gal-qual-rg1"
-    #Data source feature request in progress : https://github.com/terraform-providers/terraform-provider-azurerm/issues/3851
-  }
-}
-
 # -
 # - Core object
 # -
@@ -70,18 +55,5 @@ variable "virtual_networks" {
     id            = string
     address_space = list(string)
     subnets       = any
-    bastion       = bool
   }))
 }
-
-# -
-# - Network Security Group
-# -
-variable "network_security_groups" {
-  description = "The network security groups with their properties."
-  type = list(object({
-    id             = string
-    security_rules = any
-  }))
-}
-

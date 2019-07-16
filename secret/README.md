@@ -6,7 +6,7 @@ Folder's golden rule
 
 Secret file
 ------------
--	<vdc_ENV_ID>_backend.json : stores the credential to write Terraform backend files
+-	infra1_caas_backend.json : stores the credential to write Terraform backend files
     - Content sample ==>
     ```json
         {
@@ -16,7 +16,7 @@ Secret file
             "client_secret": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
         }
     ```
--	<vdc_ENV_ID>main.json : stores the credential to write in Infra and Apps Resource groups and store the VM credentials
+-	infra1_caas_main.json : stores the credential to write in Infra and Apps Resource groups and store the VM credentials
     - Content sample ==>
     ```json
         {

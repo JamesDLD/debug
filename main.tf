@@ -11,12 +11,30 @@ provider "azurerm" {
 }
 
 # -
-# - Call module
+# - Data gathering
 # -
-module "gtio-network-Demo" {
-  source                      = "../../gtio-network/"
-  product                     = var.product
-  network_resource_group_name = var.network_resource_group_name
-  virtual_networks            = var.virtual_networks
-  network_security_groups     = var.network_security_groups
+data "azurerm_resource_group" "network" {
+  name = var.network_resource_group_name
+}
+
+# -
+# - Network
+# -
+resource "azurerm_virtual_network" "vnets" {
+  count               = length(var.virtual_networks)
+  name                = "${var.product["entity_suffix"]}-${var.product["product_name"]}-${data.azurerm_resource_group.network.location}-${var.product["env"]}-vnet${var.virtual_networks[count.index]["id"]}"
+  location            = data.azurerm_resource_group.network.location
+  resource_group_name = data.azurerm_resource_group.network.name
+  address_space       = var.virtual_networks[count.index]["address_space"]
+
+  dynamic "subnet" {
+    for_each = var.virtual_networks[count.index]["subnets"]
+    content {
+      name           = lookup(subnet.value, "name", null)
+      address_prefix = lookup(subnet.value, "address_prefix", null)
+      security_group = lookup(subnet.value, "security_group_iteration", null) == null ? null : element(azurerm_network_security_group.nsgs.*.id, lookup(subnet.value, "security_group_iteration"))
+    }
+  }
+
+  tags = data.azurerm_resource_group.network.tags
 }

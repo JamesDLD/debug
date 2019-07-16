@@ -1,0 +1,94 @@
+2019/07/16 11:30:36 [INFO] Terraform version: 0.12.3  
+2019/07/16 11:30:36 [INFO] Go runtime version: go1.12.4
+2019/07/16 11:30:36 [INFO] CLI args: []string{"/Users/jamesdumontledouarec/Documents/Binaries/Terraform/last/terraform", "apply", "-var-file=./variable/infra1_caas_main.tfvars", "-var-file=./secret/infra1_caas_main.json"}
+2019/07/16 11:30:36 [DEBUG] Attempting to open CLI config file: /Users/jamesdumontledouarec/.terraformrc
+2019/07/16 11:30:36 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2019/07/16 11:30:36 [INFO] CLI command args: []string{"apply", "-var-file=./variable/infra1_caas_main.tfvars", "-var-file=./secret/infra1_caas_main.json"}
+2019/07/16 11:30:36 [TRACE] Meta.Backend: built configuration for "azurerm" backend with hash value 1983920158
+2019/07/16 11:30:36 [TRACE] Preserving existing state lineage "6d08a749-142b-13e7-c5e0-84c957bd5c8d"
+2019/07/16 11:30:36 [TRACE] Preserving existing state lineage "6d08a749-142b-13e7-c5e0-84c957bd5c8d"
+2019/07/16 11:30:36 [TRACE] Meta.Backend: working directory was previously initialized for "azurerm" backend
+2019/07/16 11:30:36 [TRACE] Meta.Backend: using already-initialized, unchanged "azurerm" backend configuration
+2019/07/16 11:30:36 [DEBUG] Loading Environment "public"
+2019/07/16 11:30:36 Testing if Service Principal / Client Certificate is applicable for Authentication..
+2019/07/16 11:30:36 Testing if Service Principal / Client Secret is applicable for Authentication..
+2019/07/16 11:30:36 Using Service Principal / Client Secret for Authentication
+2019/07/16 11:30:36 [TRACE] Meta.Backend: instantiated backend of type *azure.Backend
+2019/07/16 11:30:36 [DEBUG] checking for provider in "."
+2019/07/16 11:30:36 [DEBUG] checking for provider in "/Users/jamesdumontledouarec/Documents/Binaries/Terraform/last"
+2019/07/16 11:30:36 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2019/07/16 11:30:36 [DEBUG] found provider "terraform-provider-azurerm_v1.31.0_x4"
+2019/07/16 11:30:36 [DEBUG] found provider "terraform-provider-null_v2.1.2_x4"
+2019/07/16 11:30:36 [DEBUG] found valid plugin: "azurerm", "1.31.0", "/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-azurerm_v1.31.0_x4"
+2019/07/16 11:30:36 [DEBUG] found valid plugin: "null", "2.1.2", "/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-null_v2.1.2_x4"
+2019/07/16 11:30:36 [DEBUG] checking for provisioner in "."
+2019/07/16 11:30:36 [DEBUG] checking for provisioner in "/Users/jamesdumontledouarec/Documents/Binaries/Terraform/last"
+2019/07/16 11:30:36 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2019/07/16 11:30:36 [TRACE] Meta.Backend: backend *azure.Backend does not support operations, so wrapping it in a local backend
+2019/07/16 11:30:36 [INFO] backend/local: starting Apply operation
+2019/07/16 11:30:36 [TRACE] backend/local: requesting state manager for workspace "default"
+2019/07/16 11:30:36 [DEBUG] Building the Blob Client from an Access Token (using user credentials)
+2019/07/16 11:30:37 [TRACE] backend/local: requesting state lock for workspace "default"
+2019/07/16 11:30:37 [TRACE] backend/local: reading remote state for workspace "default"
+2019/07/16 11:30:37 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2019/07/16 11:30:37 [TRACE] backend/local: building context for current working directory
+2019/07/16 11:30:37 [TRACE] terraform.NewContext: starting
+2019/07/16 11:30:37 [TRACE] terraform.NewContext: resolving provider version selections
+2019/07/16 11:30:37 [TRACE] terraform.NewContext: loading provider schemas
+2019/07/16 11:30:37 [TRACE] LoadSchemas: retrieving schema for provider type "azurerm"
+2019-07-16T11:30:37.931+0200 [INFO]  plugin: configuring client automatic mTLS
+2019-07-16T11:30:37.955+0200 [DEBUG] plugin: starting plugin: path=/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-azurerm_v1.31.0_x4 args=[/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-azurerm_v1.31.0_x4]
+2019-07-16T11:30:37.965+0200 [DEBUG] plugin: plugin started: path=/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-azurerm_v1.31.0_x4 pid=73412
+2019-07-16T11:30:37.965+0200 [DEBUG] plugin: waiting for RPC address: path=/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-azurerm_v1.31.0_x4
+2019-07-16T11:30:37.983+0200 [INFO]  plugin.terraform-provider-azurerm_v1.31.0_x4: configuring server automatic mTLS: timestamp=2019-07-16T11:30:37.983+0200
+2019-07-16T11:30:38.010+0200 [DEBUG] plugin: using plugin: version=5
+2019-07-16T11:30:38.010+0200 [DEBUG] plugin.terraform-provider-azurerm_v1.31.0_x4: plugin address: network=unix address=/var/folders/j0/zhdm_pvj1hz8c25x0997cbm00000gn/T/plugin271231763 timestamp=2019-07-16T11:30:38.010+0200
+2019/07/16 11:30:38 [TRACE] GRPCProvider: GetSchema
+2019/07/16 11:30:38 [TRACE] GRPCProvider: Close
+2019-07-16T11:30:38.090+0200 [DEBUG] plugin: plugin process exited: path=/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-azurerm_v1.31.0_x4 pid=73412
+2019-07-16T11:30:38.090+0200 [DEBUG] plugin: plugin exited
+2019/07/16 11:30:38 [TRACE] LoadSchemas: retrieving schema for provider type "null"
+2019-07-16T11:30:38.091+0200 [INFO]  plugin: configuring client automatic mTLS
+2019-07-16T11:30:38.120+0200 [DEBUG] plugin: starting plugin: path=/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-null_v2.1.2_x4 args=[/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-null_v2.1.2_x4]
+2019-07-16T11:30:38.124+0200 [DEBUG] plugin: plugin started: path=/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-null_v2.1.2_x4 pid=73413
+2019-07-16T11:30:38.124+0200 [DEBUG] plugin: waiting for RPC address: path=/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-null_v2.1.2_x4
+2019-07-16T11:30:38.136+0200 [INFO]  plugin.terraform-provider-null_v2.1.2_x4: configuring server automatic mTLS: timestamp=2019-07-16T11:30:38.135+0200
+2019-07-16T11:30:38.162+0200 [DEBUG] plugin: using plugin: version=5
+2019-07-16T11:30:38.162+0200 [DEBUG] plugin.terraform-provider-null_v2.1.2_x4: plugin address: address=/var/folders/j0/zhdm_pvj1hz8c25x0997cbm00000gn/T/plugin065504120 network=unix timestamp=2019-07-16T11:30:38.162+0200
+2019/07/16 11:30:38 [TRACE] GRPCProvider: GetSchema
+2019/07/16 11:30:38 [TRACE] GRPCProvider: Close
+2019-07-16T11:30:38.219+0200 [DEBUG] plugin: plugin process exited: path=/Users/jamesdumontledouarec/Documents/GitHub/debug/.terraform/plugins/darwin_amd64/terraform-provider-null_v2.1.2_x4 pid=73413
+2019-07-16T11:30:38.219+0200 [DEBUG] plugin: plugin exited
+2019/07/16 11:30:38 [TRACE] terraform.NewContext: complete
+2019/07/16 11:30:38 [TRACE] backend/local: finished building terraform.Context
+2019/07/16 11:30:38 [TRACE] backend/local: requesting interactive input, if necessary
+2019/07/16 11:30:38 [TRACE] Context.Input: Prompting for variables
+2019/07/16 11:30:38 [TRACE] Context.Input: Prompting for provider arguments
+2019/07/16 11:30:38 [TRACE] Context.Input: Provider provider.azurerm declared at main.tf:5,1-19
+2019/07/16 11:30:38 [TRACE] Context.Input: Input for provider.azurerm: map[string]cty.Value{}
+2019/07/16 11:30:38 [TRACE] backend/local: running validation operation
+panic: inconsistent list element types (cty.Object(map[string]cty.Type{"address_space":cty.List(cty.String), "id":cty.String, "subnets":cty.Tuple([]cty.Type{cty.Object(map[string]cty.Type{"address_prefix":cty.String, "name":cty.String}), cty.Object(map[string]cty.Type{"address_prefix":cty.String, "name":cty.String, "security_group_iteration":cty.String}), cty.Object(map[string]cty.Type{"address_prefix":cty.String, "name":cty.String})})}) then cty.Object(map[string]cty.Type{"address_space":cty.List(cty.String), "id":cty.String, "subnets":cty.Tuple([]cty.Type{cty.Object(map[string]cty.Type{"address_prefix":cty.String, "name":cty.String, "security_group_iteration":cty.String})})}))
+
+goroutine 7 [running]:
+github.com/zclconf/go-cty/cty.ListVal(0xc00057c940, 0x2, 0x2, 0xc0003aa660, 0xc000bfe100, 0x1, 0x1)
+	/opt/teamcity-agent/work/9e329aa031982669/pkg/mod/github.com/zclconf/go-cty@v1.0.0/cty/value_init.go:166 +0x4bf
+github.com/zclconf/go-cty/cty/convert.conversionTupleToList.func2(0x2e058c0, 0xc0005dd260, 0x25b8de0, 0xc0005dd280, 0xc000bfe100, 0x1, 0x1, 0x442bb28, 0x0, 0x100be98, ...)
+	/opt/teamcity-agent/work/9e329aa031982669/pkg/mod/github.com/zclconf/go-cty@v1.0.0/cty/convert/conversion_collection.go:267 +0x54a
+github.com/zclconf/go-cty/cty/convert.getConversion.func1(0x2e058c0, 0xc0005dd260, 0x25b8de0, 0xc0005dd280, 0x0, 0x0, 0x0, 0xc000572460, 0xc000bfe0f0, 0x2e057c0, ...)
+	/opt/teamcity-agent/work/9e329aa031982669/pkg/mod/github.com/zclconf/go-cty@v1.0.0/cty/convert/conversion.go:34 +0xef
+github.com/zclconf/go-cty/cty/convert.retConversion.func1(0x2e058c0, 0xc0005dd260, 0x25b8de0, 0xc0005dd280, 0xc000bfe0f0, 0xc000179f20, 0xc0000db5d8, 0x5, 0xc0005846d8, 0xc000179f20)
+	/opt/teamcity-agent/work/9e329aa031982669/pkg/mod/github.com/zclconf/go-cty@v1.0.0/cty/convert/conversion.go:141 +0x6b
+github.com/zclconf/go-cty/cty/convert.Convert(0x2e058c0, 0xc0005dd260, 0x25b8de0, 0xc0005dd280, 0x2e057c0, 0xc0001cab00, 0x2e05840, 0xc00000e3f0, 0x267e8a0, 0xc0003aa360, ...)
+	/opt/teamcity-agent/work/9e329aa031982669/pkg/mod/github.com/zclconf/go-cty@v1.0.0/cty/convert/public.go:51 +0x1af
+github.com/hashicorp/terraform/terraform.checkInputVariables(0xc000179f20, 0xc0003aa990, 0x8, 0xc000bfe070, 0xe0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/variables.go:255 +0x191
+github.com/hashicorp/terraform/terraform.(*Context).Validate(0xc00015e5a0, 0x0, 0x0, 0x0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/context.go:656 +0x4d2
+github.com/hashicorp/terraform/backend/local.(*Local).context(0xc000585ee0, 0xc0005ae000, 0x1, 0x1, 0x3, 0xc000144690, 0x1, 0x3, 0x0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/backend/local/backend_local.go:120 +0x974
+github.com/hashicorp/terraform/backend/local.(*Local).opApply(0xc000585ee0, 0x2e03d00, 0xc00003aa40, 0x2e03d00, 0xc00003aa80, 0xc0005ae000, 0xc00003aa00)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/backend/local/backend_apply.go:53 +0x2e4
+github.com/hashicorp/terraform/backend/local.(*Local).Operation.func1(0xc0004b0930, 0xc0004b0940, 0xc0004b0950, 0xc0005ae000, 0xc000585ee0, 0xc00003aa00, 0xc0004b0920, 0x2e03d00, 0xc00003aa40, 0x2e03d00, ...)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/backend/local/backend.go:356 +0x135
+created by github.com/hashicorp/terraform/backend/local.(*Local).Operation
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/backend/local/backend.go:340 +0x36b

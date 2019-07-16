@@ -1,0 +1,11 @@
+#Compliled files
+.terraform
+.DS_Store
+*.tfstate
+*.tfstate.backup
+*.DS_Store
+log/
+
+# Ignoring secret file
+**/secret/*.json
+**/secret/*.tfvars
