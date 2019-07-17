@@ -49,8 +49,18 @@ variable "product" {
 # -
 # - Network object
 # -
+/*
+#This prevent from having a crash -->
+
 variable "virtual_networks" {
-  description = "The virtal networks with their properties."
+  description = "The virtual networks with their properties."
+  type=any
+}
+*/
+
+#This implies a crash described here https://github.com/hashicorp/terraform/issues/22082 -->
+variable "virtual_networks" {
+  description = "The virtual networks with their properties."
   type = list(object({
     id            = string
     address_space = list(string)
