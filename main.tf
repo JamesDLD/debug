@@ -22,7 +22,7 @@ data "azurerm_resource_group" "network" {
 # -
 resource "azurerm_virtual_network" "vnets" {
   count               = length(var.virtual_networks)
-  name                = "${var.product["entity_suffix"]}-${var.product["product_name"]}-${data.azurerm_resource_group.network.location}-${var.product["env"]}-vnet${var.virtual_networks[count.index]["id"]}"
+  name                = "test${var.product["entity_suffix"]}-${var.product["product_name"]}-${data.azurerm_resource_group.network.location}-${var.product["env"]}-vnet${var.virtual_networks[count.index]["id"]}"
   location            = data.azurerm_resource_group.network.location
   resource_group_name = data.azurerm_resource_group.network.name
   address_space       = var.virtual_networks[count.index]["address_space"]
@@ -32,7 +32,6 @@ resource "azurerm_virtual_network" "vnets" {
     content {
       name           = lookup(subnet.value, "name", null)
       address_prefix = lookup(subnet.value, "address_prefix", null)
-      security_group = lookup(subnet.value, "security_group_iteration", null) == null ? null : element(azurerm_network_security_group.nsgs.*.id, lookup(subnet.value, "security_group_iteration"))
     }
   }
 
