@@ -1,3 +1,7 @@
+Content
+-----
+Debug script to solve this issue : https://github.com/hashicorp/terraform/issues/22082
+
 Usage 
 -----
 
