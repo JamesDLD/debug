@@ -1,0 +1,140 @@
+{
+ "properties": {
+  "displayName": "Guidelines for Montiroring",
+  "policyType": "Custom",
+  "metadata": {
+   "category": "Log Monitor",
+   "gitHubPolicy": {
+    "digest": "963286065a6b78f345494a8e2d5ab84cfe503871",
+    "repoName": "JamesDLD/azure-policies",
+    "commitSha": "d628ced977785bb98fc6e7ae481b835aff0ef281",
+    "runUrl": "https://github.com/JamesDLD/azure-policies/actions/runs/423590531",
+    "filepath": "initiatives/Guidelines_for_Montiroring_a33c7463-9339-4ed4-96fc-53971cf160cf"
+   },
+   "createdBy": "be3462a7-5696-4ea5-8eb3-292136f00b3b",
+   "createdOn": "2020-12-15T16:00:30.9343194Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "effect": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Effect",
+     "description": "Enable or disable the execution of the policy"
+    },
+    "allowedValues": [
+     "DeployIfNotExists",
+     "Disabled"
+    ],
+    "defaultValue": "DeployIfNotExists"
+   },
+   "profileName": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Profile name",
+     "description": "The diagnostic settings profile name"
+    },
+    "defaultValue": "setbypolicy"
+   },
+   "logAnalytics": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Log Analytics workspace",
+     "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant Log Analytics Contributor permissions (or similar) to the policy assignment s principal ID.",
+     "strongType": "omsWorkspace",
+     "assignPermissions": true
+    }
+   },
+   "logsEnabled": {
+    "type": "String",
+    "metadata": {
+     "displayName": "Enable logs",
+     "description": "Whether to enable logs stream to the Log Analytics workspace - True or False"
+    },
+    "allowedValues": [
+     "True",
+     "False"
+    ],
+    "defaultValue": "True"
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "5029320972235895273",
+    "policyDefinitionId": "/subscriptions/6094e15e-3e04-47b5-9b3b-aa8ae3cf1e52/providers/Microsoft.Authorization/policyDefinitions/9d88aa10-1e90-436e-a97f-e37397871ba7",
+    "parameters": {
+     "profileName": {
+      "value": "[parameters('profileName')]"
+     },
+     "logsEnabled": {
+      "value": "[parameters('logsEnabled')]"
+     },
+     "logAnalytics": {
+      "value": "[parameters('logAnalytics')]"
+     },
+     "effect": {
+      "value": "[parameters('effect')]"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "14492244276831392349",
+    "policyDefinitionId": "/subscriptions/6094e15e-3e04-47b5-9b3b-aa8ae3cf1e52/providers/Microsoft.Authorization/policyDefinitions/f456b330-5f05-4218-928a-c40f37989207",
+    "parameters": {
+     "profileName": {
+      "value": "[parameters('profileName')]"
+     },
+     "logsEnabled": {
+      "value": "[parameters('logsEnabled')]"
+     },
+     "logAnalytics": {
+      "value": "[parameters('logAnalytics')]"
+     },
+     "effect": {
+      "value": "[parameters('effect')]"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "9532157590956081659",
+    "policyDefinitionId": "/subscriptions/6094e15e-3e04-47b5-9b3b-aa8ae3cf1e52/providers/Microsoft.Authorization/policyDefinitions/bd9de3f4-7c08-4206-a391-f0175d0d167c",
+    "parameters": {
+     "profileName": {
+      "value": "[parameters('profileName')]"
+     },
+     "logsEnabled": {
+      "value": "[parameters('logsEnabled')]"
+     },
+     "logAnalytics": {
+      "value": "[parameters('logAnalytics')]"
+     },
+     "effect": {
+      "value": "[parameters('effect')]"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "10251218508531246643",
+    "policyDefinitionId": "/subscriptions/6094e15e-3e04-47b5-9b3b-aa8ae3cf1e52/providers/Microsoft.Authorization/policyDefinitions/681e4490-3fbc-4a90-85cd-b640f9a6ab12",
+    "parameters": {
+     "profileName": {
+      "value": "[parameters('profileName')]"
+     },
+     "logsEnabled": {
+      "value": "[parameters('logsEnabled')]"
+     },
+     "logAnalytics": {
+      "value": "[parameters('logAnalytics')]"
+     },
+     "effect": {
+      "value": "[parameters('effect')]"
+     }
+    }
+   }
+  ]
+ },
+ "id": "/subscriptions/6094e15e-3e04-47b5-9b3b-aa8ae3cf1e52/providers/Microsoft.Authorization/policySetDefinitions/a33c7463-9339-4ed4-96fc-53971cf160cf",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "a33c7463-9339-4ed4-96fc-53971cf160cf"
+}
